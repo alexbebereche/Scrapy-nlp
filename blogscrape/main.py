@@ -22,6 +22,6 @@ if __name__ == "__main__":
     all_words = nltk.tokenize.word_tokenize(title_str)
 
     stopwords = nltk.corpus.stopwords.words('english')
-    allWordExceptStopDist = nltk.FreqDist(w.lower() for w in all_words if (w not in stopwords) and (w.isalpha() == True)) # could add len condition to exclude words like 'a'
+    allWordExceptStopDist = nltk.FreqDist(w.lower() for w in all_words if (w.lower() not in stopwords) and (w.isalpha() == True)) # could add len condition to exclude words like 'a'
 
-    print(allWordExceptStopDist.most_common(10))
+    print(allWordExceptStopDist.most_common(100))
