@@ -1,5 +1,3 @@
-from gettext import textdomain
-from operator import ne
 import scrapy
 
 
